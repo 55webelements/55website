@@ -1,0 +1,897 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.7
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Apr 01, 2019 at 08:57 AM
+-- Server version: 5.6.41-84.1-log
+-- PHP Version: 5.6.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `a9iceonj_55web`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `about`
+--
+
+CREATE TABLE `about` (
+  `id` int(11) NOT NULL,
+  `aType` varchar(50) DEFAULT 'whoweare',
+  `aTitle` varchar(100) DEFAULT NULL,
+  `aDesc` text,
+  `aIcon` varchar(255) DEFAULT NULL,
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `about`
+--
+
+INSERT INTO `about` (`id`, `aType`, `aTitle`, `aDesc`, `aIcon`, `status`, `createDate`, `updateDate`) VALUES
+(1, 'whoweare', NULL, '<p>We are a team of accomplished and talented design and programming professionals offering innovative and unique digital solutions. Creativity and focus are our key ideas aimed at achieving definite and tangible benefits to our client\'s business. Creation of engaging and interactive digital platforms is our mission.</p><p>We strive to create a strong brand value through our designs that ensures uplifting of the business opportunities. We have the zeal to establish a niche space for ourselves in the domain of Design and Web Development. And we anticipate facing challenges that bring the best out of our adept, competent and professional team.</p>', '', 1, '2018-11-12 15:39:04', '2018-11-12 15:39:04'),
+(2, 'whatwedo', NULL, '<p>We create the quintessential digital presence of client’s product, service or idea, enhancing global visibility and accessibility. We aspire to facilitate a delightful user experience both to our clients and their business partners with our righteous approach to work. Our goal is to create a significant brand identity to the client’s product on a digital platform. We offer turnkey solutions backed by total support in this direction.</p><p>We pride ourselves for standing out among our competitors with our precise and timely deliverable. Our inclusive and exhaustive web services and web development solutions leave no stone unturned in achieving total customer satisfaction.</p>', '', 1, '2018-11-12 15:39:27', '2018-11-12 15:39:27'),
+(3, 'process', 'Research', '<p>An extensive knowhow of your core business and an insight in to your processes forms the basis of our research. Knowledge of your services, customers, target audience and competitors guides us in design development.<br></p>', '1542017400_research.gif', 1, '2018-11-12 15:40:00', '2018-11-12 15:53:51'),
+(4, 'process', 'Define', '<p>Your business aspirations define our design goals. An accurate perception on the needs of your current clientele and the targeted group helps us steer your business towards a bright and rewarding future.<br></p>', '1542017534_define.gif', 1, '2018-11-12 15:42:14', '2018-11-12 15:53:45'),
+(5, 'process', 'Finalize', '<p>An authentic and perfect silhouette of your website is our final product. The attractive home page, informative subpages, all-purpose mobile apps and many more functions are crafted integrating technology and creativity in the right ratio.<br></p>', '1542017565_ok.gif', 1, '2018-11-12 15:42:45', '2018-11-12 15:53:38'),
+(6, 'process', 'Code', '<p>Structure of the online framework of your organization is put in place by our design development team. This design takes shape in the able hands of our technology team who create the necessary coding.<br></p>', '1542017578_coading.gif', 1, '2018-11-12 15:42:58', '2018-11-12 15:53:31'),
+(7, 'process', 'Testing', '<p>A bona fide launch of the website and official handing over to the client takes place only after testing for the desired functionalities. A comprehensive testing of design and coding takes place in all the areas.<br></p>', '1542017593_testing.gif', 1, '2018-11-12 15:43:13', '2018-11-12 15:53:25'),
+(8, 'process', 'Launch', '<p>This is the phase where your dream of an effective web presence is accomplished opening up new arenas of business opportunities. Our partnership flags off from here to continue on the path of your success.<br></p>', '1542017624_launch.gif', 1, '2018-11-12 15:43:44', '2018-11-12 15:53:18');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `banners`
+--
+
+CREATE TABLE `banners` (
+  `id` int(11) NOT NULL,
+  `bTitle` varchar(100) DEFAULT NULL,
+  `bDesc` varchar(150) DEFAULT NULL,
+  `bLocation` varchar(100) DEFAULT NULL,
+  `bImage` varchar(255) DEFAULT NULL,
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `banners`
+--
+
+INSERT INTO `banners` (`id`, `bTitle`, `bDesc`, `bLocation`, `bImage`, `status`, `createDate`, `updateDate`) VALUES
+(1, '55 WEB ELEMENTS', 'Web Designing and Development Company', 'based in Hyderabad', '1541154996.jpg', 1, '2018-11-02 16:06:36', '2019-01-26 07:04:54');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blogs`
+--
+
+CREATE TABLE `blogs` (
+  `id` int(11) NOT NULL,
+  `bTitle` varchar(300) DEFAULT NULL,
+  `bDesc` text,
+  `bImage` varchar(255) DEFAULT NULL,
+  `seoURL` varchar(255) DEFAULT NULL,
+  `seoCustomURL` text,
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `bTitle`, `bDesc`, `bImage`, `seoURL`, `seoCustomURL`, `status`, `createDate`, `updateDate`) VALUES
+(1, 'Helping you find and connect with new clients', '<p>Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.</p><p>Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.</p><p>Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.</p>', '15411605021465562574.jpg', 'home/viewBlog/1', 'helping-you-find-and-connect-with-new-clients', 1, '2018-11-02 17:38:22', '2019-01-26 07:29:38'),
+(2, 'Making your company look professional and established, while extending your brand.', '<p>Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.</p><p>Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.</p><p>Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.Making your company look professional and established, while extending your brand.</p>', '1542022907sqy-large.jpg', 'home/viewBlog/2', 'making-your-company-look-professional-and-established-while-extending-your-brand', 1, '2018-11-02 17:42:29', '2018-11-12 17:11:47'),
+(3, 'Increase sales of your online store?', '<p>test</p>', '1542022743coading.gif', 'home/viewBlog/3', 'increase-sales-of-your-online-store', 1, '2018-11-12 17:09:03', '2019-01-26 07:16:00'),
+(4, 'Helping you find and connect with new clients', '<p>Helping you find and connect with new clients&nbsp;Helping you find and connect with new clients&nbsp;Helping you find and connect with new clients&nbsp;Helping you find and connect with new clients&nbsp;Helping you find and connect with new clients&nbsp;Helping you find and connect with new clients&nbsp;<span style=\"color: inherit;\">Helping you find and connect with new clients&nbsp;Helping you find and connect with new clients&nbsp;Helping you find and connect with new clients&nbsp;Helping you find and connect with new clients&nbsp;Helping you find and connect with new clients&nbsp;Helping you find and connect with new clients</span><br></p>', '1548491576Lighthouse.jpg', 'home/viewBlog/4', 'helping-you-find-and-connect-with-new-clients', 1, '2019-01-26 08:32:56', '2019-01-26 08:32:56'),
+(5, 'Discover new opportunities for business through the internet?\r\n', '<p>Discover new opportunities for business through the internet?&nbsp;Discover new opportunities for business through the internet?&nbsp;Discover new opportunities for business through the internet?&nbsp;Discover new opportunities for business through the internet?&nbsp;Discover new opportunities for business through the internet?&nbsp;Discover new opportunities for business through the internet?&nbsp;<br></p>', '1548491601Tulips.jpg', 'home/viewBlog/5', 'discover-new-opportunities-for-business-through-the-internet', 1, '2019-01-26 08:33:21', '2019-01-26 08:33:21'),
+(6, 'Redesign your website?\r\n', '<p>Redesign your website?&nbsp;<span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span><span style=\"color: inherit;\">Redesign your website?&nbsp;</span></p>', '1548491633Desert.jpg', 'home/viewBlog/6', 'redesign-your-website', 1, '2019-01-26 08:33:53', '2019-01-26 08:33:53'),
+(7, 'Increase hits to your site?\r\n', '<p>Increase hits to your site?&nbsp;<span style=\"color: inherit;\">Increase hits to your site?&nbsp;</span><span style=\"color: inherit;\">Increase hits to your site?&nbsp;</span><span style=\"color: inherit;\">Increase hits to your site?&nbsp;</span><span style=\"color: inherit;\">Increase hits to your site?&nbsp;</span><span style=\"color: inherit;\">Increase hits to your site?&nbsp;</span><span style=\"color: inherit;\">Increase hits to your site?&nbsp;</span><span style=\"color: inherit;\">Increase hits to your site?</span><br></p>', '1548491652Jellyfish.jpg', 'home/viewBlog/7', 'increase-hits-to-your-site', 1, '2019-01-26 08:34:12', '2019-01-26 08:34:12'),
+(8, 'Giving new contacts an easy way to learn more about you.\r\n', '<p>Giving new contacts an easy way to learn more about you.&nbsp;<span style=\"color: inherit;\">Giving new contacts an easy way to learn more about you.&nbsp;</span><span style=\"color: inherit;\">Giving new contacts an easy way to learn more about you.&nbsp;</span><span style=\"color: inherit;\">Giving new contacts an easy way to learn more about you.&nbsp;</span><span style=\"color: inherit;\">Giving new contacts an easy way to learn more about you.&nbsp;</span><span style=\"color: inherit;\">Giving new contacts an easy way to learn more about you.&nbsp;</span><span style=\"color: inherit;\">Giving new contacts an easy way to learn more about you.&nbsp;</span><br></p>', '1548491678Koala.jpg', 'home/viewBlog/8', 'giving-new-contacts-an-easy-way-to-learn-more-about-you', 1, '2019-01-26 08:34:38', '2019-01-26 08:34:38');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `careers`
+--
+
+CREATE TABLE `careers` (
+  `id` int(11) NOT NULL,
+  `cDesc` text,
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `careers`
+--
+
+INSERT INTO `careers` (`id`, `cDesc`, `status`, `createDate`, `updateDate`) VALUES
+(1, 'We are always looking for talented web designers and web developers who are passionate about making great products. Just drop us a line, we’d be happy to talk with you. \r\n<a href=\"mailto:hr@55web.in\"> hr@55web.in</a>', 1, '2018-11-12 16:00:32', '2019-01-26 07:34:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ci_sessions`
+--
+
+CREATE TABLE `ci_sessions` (
+  `id` varchar(40) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `data` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
+('a788b64c41c9be7a526f89413f5c7ffed7f15fde', '::1', 1541498683, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313439383632383b),
+('e70f06dae040b05b21b3a6106671254e612b0413', '::1', 1541499243, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313439383934373b),
+('3086a1e4917ee0fd76d16899722180a90a56be1f', '::1', 1541499534, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313439393235343b),
+('01ac6b9cea15c6996c771b7a778fe022dc9cbab3', '::1', 1541499792, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313439393631363b),
+('aaa762700e26cd70476e691823beda50b0e35bb1', '::1', 1541499990, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313439393931393b),
+('2fcd52390b634c958e1ea92ed47016731665b12c', '::1', 1541500350, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313530303331333b),
+('2cfadd11eca917406ba0dd600a3b64c647e4cc75', '::1', 1541500879, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313530303638363b),
+('cdb57267890d18782859adbc5b013169ad0a7b39', '::1', 1541501335, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313530313038393b),
+('c3fc015ac3b3710d46bdf291e8357bd4a5d96d09', '::1', 1541501706, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313530313432323b),
+('701eca66e0f2bb90b07bb5c5fa729bae15299e30', '::1', 1541501953, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313530313830333b),
+('0f6c130628a4010ee6991c3fa25ccd9a90c9a38b', '::1', 1541502408, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313530323233343b),
+('b720ddb7cf2073df1fac7b727b8fce58e32b666e', '::1', 1541502852, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313530323536333b),
+('3a85c1607c25e84943223ceb2c8b62618f64edf9', '::1', 1541502921, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313530323838363b),
+('d1052859aaa962585ca31a943ffbeaf0c3da1d64', '::1', 1541503483, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534313530333438303b),
+('9ffcc05ee5aa366961d73ce18981642ba8ae2c8c', '::1', 1542013006, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534323031323939353b),
+('0e71fd6f7ee3f03c96c8b494da59c41fbe6cfe64', '::1', 1542020241, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534323032303038343b),
+('dd3666caa0115d0e9d6ed0ff1caa8b17b94fb34c', '::1', 1542020486, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534323032303236303b),
+('1e64aec2fb8a73df69cf59b29c36039876424bd0', '::1', 1542020917, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534323032303639333b),
+('8f08ea8da4de2fa4b92edd95009b65094ec44b3e', '::1', 1542021415, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534323032313231303b),
+('8ab3f735249ade6e9b5386a2de688386484b5d9f', '::1', 1542021786, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534323032313635323b737563636573735f62616e6e6572737c733a34373a2253756363657366756c6c79205375626d69747465642e2057652077696c6c20636f6e7461637420796f7520736f6f6e223b),
+('f664fa0da86983ad0b85d67e00be05cfa0f1c786', '::1', 1542022229, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534323032323033373b737563636573735f62616e6e6572737c733a34373a2253756363657366756c6c79205375626d69747465642e2057652077696c6c20636f6e7461637420796f7520736f6f6e223b),
+('00ee3ecb8b3a36d8a0d97eb86a624e9d66daedf7', '::1', 1542023012, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534323032323738313b737563636573735f62616e6e6572737c733a34373a2253756363657366756c6c79205375626d69747465642e2057652077696c6c20636f6e7461637420796f7520736f6f6e223b),
+('3bf9aa40ca349c5c784484f86c427505fa354c35', '::1', 1542023240, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534323032333135373b737563636573735f62616e6e6572737c733a34373a2253756363657366756c6c79205375626d69747465642e2057652077696c6c20636f6e7461637420796f7520736f6f6e223b),
+('6ebe2d2f79e8196c55cca11ba25995f14c83c0d5', '60.243.163.188', 1542023501, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534323032333438383b),
+('e950d9f8787d8deb2362e8a23a02b45b000f70b1', '60.243.163.188', 1542023701, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534323032333537363b),
+('385a66e57e32fe40df57eac14ae33fec95e84164', '60.243.163.188', 1542025782, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534323032353738323b),
+('c37acdfe8b371fab2d9c048e7f389eb6a26fc96b', '115.98.51.247', 1548138242, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383133383137313b),
+('6c14a8f4005354a77a0e6e60bd0e3868aab64249', '115.98.51.247', 1548138277, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383133383237373b),
+('5d9d2c632db1bc9d52080b048b5441f9fe55ca31', '27.59.146.233', 1548138363, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383133383336333b),
+('ac91e304c3c9dcfb9834b66afb80be440282552d', '115.98.51.247', 1548138381, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383133383336373b),
+('f6b28fe36f1ab8b0e08864b86357cda6628dcebb', '64.233.173.143', 1548138386, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383133383337343b),
+('6d2d9b6fbdec60a0b3fd3ad029727e53e2cb8b93', '183.83.226.145', 1548161620, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383136313538343b),
+('0234aae743420e84d50d3539b544a48dcf099d15', '27.59.155.114', 1548161701, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383136313730313b),
+('9c6e18a27aa42fb3b6531368e637876960d3c7e1', '115.98.10.169', 1548162804, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383136323830343b),
+('9d7990a579d791e69bbb97f922837582e919c5cb', '27.59.155.114', 1548162999, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383136323939393b),
+('e1ef0bc368d3d4c1fa8419ae3cee05d30db7b7b9', '106.208.57.234', 1548221561, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383232313536313b),
+('509c3b5805442ce0db4cd3e5f1135a3d876febe9', '27.6.105.190', 1548396090, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383339363039303b),
+('87e3de4f9528fdf82d07a02c1052a7b573f4248c', '27.6.105.190', 1548396113, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383339363131333b),
+('d5c2cb11f832c64a6d7353e3fba2ed8a9fdcab6b', '27.6.105.190', 1548396610, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383339363432303b),
+('eb7a34af10051f6e5e463de44e8faf11db190e59', '27.6.105.190', 1548396998, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383339363830383b),
+('dcf63d785ce2f7a28919bd844b2e5573bb477f39', '27.6.105.190', 1548398177, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383339373933373b),
+('e334bcb75e6d22e19d4d286b1af18621e09e901e', '27.6.105.190', 1548398251, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383339383234333b),
+('f2bc5065ccae4dba141aa1f854dfe00cde4b54d3', '27.6.105.190', 1548398292, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383339383238353b),
+('aa95f583bfada8ab2bcd0d87b3c431c4fcc7bf3d', '27.6.105.190', 1548401113, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383430303930353b),
+('2e74cc3d11622556289d5d990ca249960509a433', '183.83.161.94', 1548409063, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383430393036333b),
+('aa9c6e584923ce10058df46458c79bd678ce8d30', '183.83.161.94', 1548410852, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383431303835323b),
+('db58f349c1ae6e26d84396aa07b7acd482494b8c', '183.83.161.94', 1548411285, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383431313235363b),
+('98ae46f1e6c68de66ff2c4f9523438310db741e7', '183.83.161.94', 1548414760, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383431343736303b),
+('41b8b86bdb156f150f46cdd7a3e0916e9e9df056', '183.83.161.94', 1548419172, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383431393032313b),
+('13288924155486e8f19d0f443537bc5cce11c8f1', '183.83.161.94', 1548420051, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383432303035313b),
+('64f1631bb7cd00b4dc2c3794fae14e170637b68f', '183.83.161.94', 1548480162, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438303136323b),
+('1005b51d55becdc1d2245391dc53a110c208880d', '223.230.9.14', 1548481104, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438313130333b),
+('415f006ede9cbf8ac13643b4a13ce0316f86c388', '183.83.161.94', 1548481401, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438313337343b),
+('c07cc775a2f8a806588797d32997cf768a735bb5', '183.83.161.94', 1548482051, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438313739343b),
+('ded705f21aaeb37414e5a4c2ef652adfe9806062', '223.230.9.14', 1548482047, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438313837303b),
+('bfebd0c721c86bde205de6906f5dcd5e69d22776', '223.230.9.14', 1548482189, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438323138393b),
+('d686aa88dd6ffe7306785a567059866cd922d71d', '115.98.13.97', 1548485080, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438343832353b),
+('e5afa686f81281b1cdcd66037c6061044fa472f2', '115.98.13.97', 1548485231, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438343934373b),
+('fc5f5227d90370761951d85d41eeecccde9d4c79', '115.98.13.97', 1548485423, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438353138363b),
+('99fc8738d3baf02b4bba349ac45d48068734274c', '115.98.13.97', 1548485707, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438353430393b),
+('0467576791c7a363abcf9e21c5de7c349c292f63', '223.230.9.14', 1548485531, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438353533313b),
+('e9046f4e61644de2860ebd185d9b5681aab337b9', '115.98.13.97', 1548485774, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438353533343b),
+('3c8f0cdd7a4aaf96d6d8708c469c1ab351fabc72', '183.83.161.94', 1548485808, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438353534313b),
+('3c1d99d6969fec0ea73acedb3357a2d2ef98dbd0', '115.98.13.97', 1548485893, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438353732313b),
+('37f43af5e85979dd703462f352fce22b20549648', '115.98.13.97', 1548486112, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438353838363b),
+('db33db33eb33d5b562e59b3bb037784187bfc719', '183.83.161.94', 1548486031, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438353839373b),
+('6dde95518b755e5003194917c049d069541289fd', '115.98.13.97', 1548486381, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363139383b),
+('a3fe47917920e9c565b74e8c0c048a90a6939fa1', '223.230.9.14', 1548486206, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363230363b),
+('902eb7ccd74492c93a4ccccf780884682e649959', '115.98.13.97', 1548486546, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363335383b),
+('0765a543bbf98466d5d6e0e76e2a10bf3f2f2bf9', '183.83.161.94', 1548486621, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363339373b),
+('af79d09f5c785bbcb8eb9285decc7dd567b1f9e2', '115.98.13.97', 1548486717, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363530373b),
+('e1cab8fb002d59c3437703adc3abe55dc8db27d7', '54.211.41.31', 1548486805, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363830353b),
+('82427c61d209410dc86c35adef639668bce0b6da', '54.204.184.145', 1548486809, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363830393b),
+('43b219c68dc85c48db3c8b6dddc16bf220a5ee9a', '115.98.13.97', 1548487110, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363831383b),
+('a3738f5725f02f86827b9ba355167e5a5c584e3b', '54.86.99.37', 1548486824, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363832343b),
+('7b05c29972feb72d21d5939ad49ce223136ad6bd', '54.234.170.96', 1548486827, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363832373b),
+('dd7d055ccad8412080322a9141f39438535b88df', '54.205.183.112', 1548486828, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363832383b),
+('99474e0e0f494fcf08d6f804e02a1ca1cb4628c8', '54.205.183.112', 1548486833, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363833333b),
+('a1c760f3ed7d9c13194e982d60459f149e8ee8b8', '115.98.13.97', 1548486838, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363833383b),
+('b2110f5e9c0078b92459fff605da16b80a767967', '54.205.183.112', 1548486838, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363833383b),
+('ceb45e8c50f3e1a1c38053d7a3a95e767985e9ba', '54.86.99.37', 1548486844, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363834333b),
+('75c91910d35f01b54ea152702abf060c1c81b202', '54.205.183.112', 1548486854, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363835343b),
+('43049e536e395aee91d13d093ed56a8386d69837', '54.158.162.194', 1548486858, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363835383b),
+('a58f9a86902cf780a5e77b1c769fb8041c6e0488', '183.83.161.94', 1548487121, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438363838383b),
+('b40163fc51938041e416cdc8109b13d934e91ac7', '183.83.161.94', 1548487402, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373230313b),
+('0aa7b72e900d6c00e21da046322094ccdc088ebe', '115.98.13.97', 1548487466, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373235393b),
+('566ce8803677b6b5245129ccad54853033a730b2', '115.98.13.97', 1548487555, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373238313b),
+('961d5fa67df7cf5fc683528caf7fccaa77733759', '54.204.184.145', 1548487283, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373238333b),
+('2ecbfcfc26d4f3e98a1d338f264679e19dac8a9f', '54.86.99.37', 1548487291, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373239313b),
+('78d50de323b8d6d690605981fe138a18ade3c466', '54.234.170.96', 1548487294, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373239343b),
+('f68238f2e8bff9f6b3fedb90d1ba0fe894439bb1', '54.86.99.37', 1548487294, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373239343b),
+('5fa1aab846f3779bbe459ec8fdbbc96ecfefc088', '54.86.99.37', 1548487300, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373330303b),
+('699e3a7d16407c126eee4b2413dff755f7470ec0', '115.98.13.97', 1548487866, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373538323b),
+('8306b0853a6460eaf0f86d53d4abca58bd468805', '115.98.13.97', 1548487960, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373636353b),
+('7c1ac33f58d9639ffb7e38eb0ffff0f114777b50', '183.83.161.94', 1548487890, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373839303b),
+('8531aeb95961370cb2693911620d9880d9d738a9', '115.98.13.97', 1548488110, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373839333b),
+('05b01a2a750dffc8ec0fb1fcb7d724b312a5f051', '223.230.9.14', 1548488029, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438373934323b),
+('560d9e29f2d7b6c7cb44779aab99d111b8566a27', '115.98.13.97', 1548488249, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438383036343b),
+('9fc42b96639dad4d016a9c3940aca4d5639d9d93', '115.98.13.97', 1548488487, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438383231313b),
+('f118acf53b6e1de64d2ee1d9f94e97cd17aeeeff', '183.83.161.94', 1548488481, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438383237393b),
+('b0960d091cc78e9e0936cf53ba6c889c69fff7ca', '115.98.13.97', 1548488527, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438383337323b),
+('8b81a7d91f328464aceb9cb74671cd642bd157a8', '223.230.9.14', 1548488478, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438383337373b),
+('e6d94fab70042841dd39b00299e15b39cf19f82f', '115.98.13.97', 1548488792, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438383538383b),
+('ab48f0120cb70c9acba60cbed4e202ad09ae2c7b', '183.83.161.94', 1548488666, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438383630373b),
+('8cd4d31507c125617db32e7d15c672f455d3f197', '115.98.13.97', 1548488742, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438383732373b),
+('25ee435d9c10b7fa576838a2b9f2537861f4cf72', '223.230.9.14', 1548488925, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438383932353b),
+('b16e36e9abfa2f5c52458daec7a05ea61c7f2785', '115.98.13.97', 1548488961, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438383933323b),
+('3c3c046726027e3e43369596d1a209ba8b6e8cb0', '115.98.13.97', 1548489464, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438393137363b),
+('d60db5385f49870b19686ccd7258aae8bc6828a3', '183.83.161.94', 1548489360, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438393330323b),
+('916a562b85bd00644a243fbf19fa45a1bd80985c', '115.98.13.97', 1548489551, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438393332363b),
+('f091481bca432260413b476ef4267ab1a22641cd', '115.98.13.97', 1548489899, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438393630373b),
+('20dd9e3250ca96105e471f63d21128e8abb18c7f', '115.98.13.97', 1548490023, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438393737373b),
+('bac9f3effd4c142cc3d1d97cace0cf6d8866d160', '183.83.161.94', 1548489985, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438393831363b),
+('b06b367787388f8b6aa93593f12d629e2c165430', '115.98.13.97', 1548490187, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383438393931333b),
+('d104d394c132cac6bc92320b77a528b6b24b6270', '115.98.13.97', 1548490129, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439303130313b),
+('bda61724e8ed162f6bb9094a165302fd5c3b6994', '115.98.13.97', 1548490398, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439303232303b),
+('bc05437fed978783d7b0146e1239cc930e40ddfa', '183.83.161.94', 1548490400, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439303335373b),
+('5aca3bd235186c991a03180c14d0c0598239d0ad', '115.98.13.97', 1548490590, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439303438373b),
+('664de54ce542a7de32d8d9d02c06702f082042f3', '115.98.13.97', 1548490711, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439303534323b),
+('a52c8d867beafda3d6f1483814c269db108209ed', '72.47.214.191', 1548490659, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439303635393b),
+('0c3398ebe4324533bf1ab91b289c9a0f0d04cacd', '72.47.214.191', 1548490685, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439303638353b),
+('0fff56731a35fd476048dbd92b7b7be6579d1a3d', '72.47.214.191', 1548490685, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439303638353b),
+('b655cff3e179bf693e1c64553468993bd7d3014d', '72.47.214.191', 1548490688, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439303638383b),
+('423745f8763645f378f4e41f28a9e649d63f65d4', '72.47.214.191', 1548490689, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439303638393b),
+('1216a02891b5948181b2d1b6bb2ab2640b5a89b8', '115.98.13.97', 1548490859, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439303835313b),
+('8bed018f9a2d00aca88aec42477b1079708b911a', '115.98.13.97', 1548491061, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439303835333b),
+('193e9838ed4503d14531488c5deeae5d407b40b9', '115.98.13.97', 1548491452, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439313233333b),
+('7112298c93da646a8157050d8678b7da069b9c44', '115.98.13.97', 1548491845, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439313538313b),
+('3bfdfafa74ea0822db38769227b25c8a882794ea', '115.98.13.97', 1548492148, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439313933363b),
+('9e9db35938db183e80bf632c2eae7dd86fb76664', '183.83.161.94', 1548492247, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439323032333b),
+('7ccbcee54a49820531096f047642e3efc592ee7a', '115.98.13.97', 1548492394, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383439323234303b),
+('e2f951685225fa8390122704803ea8f5673abd98', '183.83.161.94', 1548653156, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383635333135353b),
+('e53dfd67a968bbed4ab4b34c1fc82cef25411899', '183.83.161.94', 1548654317, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383635343034313b),
+('b45017f93c6cf3915125b2c703d4600b36aafb92', '183.83.161.94', 1548654540, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383635343433373b),
+('cad486f79cc67246e40570f03088139814338316', '183.83.161.94', 1548657071, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383635373037313b),
+('9076a88f031456cf5c4a4e881f2e3eb946473d8f', '183.83.161.94', 1548657854, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383635373630323b),
+('2dcfd64373f71cf5a3b35babedc1e0d0d051bf8d', '183.83.161.94', 1548657916, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383635373931363b),
+('7a421efa5528bd6d47a2b384b8720e36b83c65a6', '183.83.161.94', 1548658684, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383635383638343b),
+('6f50cec5c284f790ba5d701b578f8d801a5ea4df', '183.83.161.94', 1548659880, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383635393832373b),
+('9e62fb1c2a849fecce2c22f439ac91bfeb91b24f', '183.83.161.94', 1548660213, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383636303231333b),
+('2a37c075efae3b757fbfccf4b98262e8ff131943', '183.83.161.94', 1548661064, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383636303930323b),
+('713901ce85cee0c2417df0aa437dfcf65c52e0bc', '183.83.161.94', 1548662148, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383636323033323b),
+('3dbdbd961a5c99089e3f2aea5c56f942853630b2', '183.83.161.94', 1548666298, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383636363239383b),
+('ecce44938213b9f6ad19beb1c430bdfa64ddd535', '34.226.64.191', 1548666321, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383636363332303b),
+('9999aea665c085d06c661fa12e22248370734837', '183.83.161.94', 1548667079, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383636373037373b),
+('84eaef891d217008862acd495f84680019b93e65', '183.83.161.94', 1548667719, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383636373731393b),
+('5bbfb6e6d688a037ce53a63973968ff1199cfb04', '34.226.64.191', 1548667780, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383636373738303b),
+('22976cea80d766c54482a085e792521f14a63a6d', '192.169.244.12', 1548667969, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383636373936393b),
+('1e3800b7b0c643428cfb865c8f1f92fe69cdac16', '183.83.161.94', 1548670574, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383637303537343b),
+('1c6b1f708611f8998cceffa72bf261bee2f5977d', '183.83.161.94', 1548680126, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383637393836393b),
+('7250f74f24d2b286d0f6d4592c3950eaaa9a6005', '183.83.161.94', 1548680287, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383638303235383b),
+('2686ed699f2f3e4a71bcfab0cafdc48b58c76c10', '183.83.161.94', 1548753079, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383735333037393b),
+('0dc006c2e8c1942d86f5eaa3bee21da308a63094', '183.83.161.94', 1548755674, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383735353538353b),
+('6646e6051ec6da08c3d5c4c2409f04c385407fca', '183.83.161.94', 1548757734, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383735373730383b),
+('d342d2c6c9bd7d19c1c322d05eeecd3dc5f71300', '183.83.161.94', 1548826682, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383832363638313b),
+('3a935aa182a93ef28aaca8a5ae3e2c69c30708c4', '183.83.161.94', 1548827582, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383832373335373b),
+('268a2007a7f3e63bfb8e76c8c4fb27371e64e023', '183.83.161.94', 1548827623, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383832373632333b),
+('b679e678c6e4344f73852f3f59abea0ccba03088', '183.83.161.94', 1548827981, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383832373833353b),
+('b2f69af33ae0211dbda2d7f75f8d2ef8f739f48a', '183.83.161.94', 1548828203, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383832383230333b),
+('a5b6cc1e559914d2ec25c82aa9c300937fc691ba', '183.83.161.94', 1548842121, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383834323030323b),
+('f0f387a55893a5e52113e73e004876f0bd09a66a', '183.83.161.94', 1548852636, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383835323633363b),
+('ef1c5128638e760ae1c214fdeb012745eeaaa1ef', '111.118.215.72', 1548852651, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383835323635313b),
+('a850e2793ad7d5c82b2739166e964beaf0d64af6', '183.83.161.94', 1548853336, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383835333330313b),
+('c59cbd86e257e395cd9c8f978728905da7d5d110', '183.83.161.94', 1548913061, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383931333036313b),
+('7eac1643363aec568d1c6b8e49748571a5d4d61f', '52.2.204.170', 1548913373, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383931333337333b),
+('11ef465ac7eb33e679364ff8133c75653c6d74e0', '111.118.215.72', 1548913488, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383931333438373b),
+('82228d15dbaf9030c1b1804bb8ab1b072690aa3c', '183.83.161.94', 1548914377, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383931343038383b),
+('f3a086edbc82d2cb8ab37d51128e499641f05fa7', '54.174.55.92', 1548914104, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383931343130343b),
+('ac1f90254e20c146fed649d9b54e6fed5467b4bf', '54.174.54.72', 1548914106, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383931343130353b),
+('697ef57849e708b8d47e7203736b09d6cec7103a', '54.174.54.156', 1548914192, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383931343139323b),
+('2377922d002a3b87520f5f5cdf395ee782c86d76', '54.174.55.116', 1548914194, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383931343139343b),
+('5451c9327c64e043bbff25479673e8d5d6007316', '183.83.161.94', 1548914624, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383931343431363b),
+('a052318ce41dc2660f391d172a75f719913a31f4', '183.83.161.94', 1548916132, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383931353932323b),
+('6235e05cfa110537ff61ecd30729b6050388b191', '183.83.161.94', 1548916425, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383931363432353b),
+('dec9c97e0406eee61ab4246573a79983a3fb0b54', '183.83.161.94', 1548918572, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383931383537323b),
+('5a4b3f9ab284ae62e07e7d63b881d00b143018e7', '183.83.161.94', 1548998800, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383939383830303b),
+('a80bd9fa7a82a129edaef683bdcfca9fa9614b8e', '183.83.161.94', 1549005100, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393030353031313b),
+('c5f81a1366c8ac34dd8bcd2b117fbfdec784d2ec', '183.83.161.94', 1549005445, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393030353338323b),
+('3e2b4a39d3b6388f8fc41d751871c3a7a2b02740', '183.83.161.94', 1549010537, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031303238323b),
+('af2002dc3eeee2046075380e9c28a6e50ee2c7d9', '183.83.161.94', 1549011063, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031303838313b),
+('ea9d605ad7e74a6a5da2d0ca0bf11de7eaf3618d', '183.83.161.94', 1549011970, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031313937303b),
+('973c5cd89ea0e794597c2367b0871e20b75518c6', '183.83.161.94', 1549012488, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031323330363b),
+('0b8132ac999490569cbc716fc4501f151cef8593', '183.83.161.94', 1549012780, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031323734393b),
+('67c2e2e65e4baed7071590c2692032674070ea5f', '183.83.161.94', 1549014149, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031333939393b),
+('46e6c07fa15c12809ee122d75b018c5da287953e', '183.83.161.94', 1549014588, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031343538323b),
+('28a51eadb267f6d634821a1e33d21b57a8c469c2', '183.83.161.94', 1549016164, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031363135363b),
+('ba7afe55f397293d6d3be58fb9c3f897bd7f2a38', '183.83.161.94', 1549016857, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031363734363b),
+('bbf221cfd6f8fd46b34ca8ae9459472a06e29adc', '183.83.161.94', 1549017108, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031373130383b),
+('50cb1c535bedb055c4eb8b28b771d93b43cac918', '183.83.161.94', 1549017849, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031373834393b),
+('7f0a6b13f155a89366a9ca5bcc88a160b2ef558d', '183.83.161.94', 1549018440, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031383434303b),
+('c270eba894b68f39ded8aa75159e27a59e6bbe8e', '183.83.161.94', 1549019075, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393031393037353b),
+('430f189e90139522a21f9b6ae583f1408c1c673b', '183.83.161.94', 1549023097, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393032333039373b),
+('d1c55316627354d6ba1f13e4c0fae47856b9bb67', '223.230.9.14', 1549256324, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393235363330373b),
+('e42fb17d9a704e454ce31329833eca9f54364139', '106.200.176.14', 1549256311, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393235363331313b),
+('533972debf5647fd4f11e34da2f9bff5d1159bf8', '171.49.227.64', 1549256680, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393235363339343b),
+('ab3c2185b82fde34dc4cf6c3bed256a2b8ce8170', '223.230.9.14', 1549256913, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393235363931333b),
+('b5f4b5841248b8b29136c636fdb7e4af23723ce1', '223.230.9.14', 1549257118, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393235363937303b),
+('fe6b3fb11c7bbcc4d261597a4c4c285eb572a447', '171.49.227.64', 1549257044, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393235373034343b),
+('74674bfc1f2517d5e17d96d49ac62e8bce813313', '171.49.227.64', 1549257103, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393235373130333b),
+('6994f1941c254227a503647db3625195a4a1c15c', '171.49.227.64', 1549257464, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393235373436343b),
+('e47ef0fb4ba3c997c92b858f373ab47a41fb89c3', '223.230.9.14', 1549257597, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393235373539373b),
+('31c286e7e40b0af89a8cd9a8082ac7b6a27d368c', '223.230.9.14', 1549258367, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393235383230393b),
+('122431d74a09aea03b5de57d6992d124228def47', '171.49.227.64', 1549258439, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393235383238363b),
+('51a682365ae05c49b083de2532b2ae19eb5cd73a', '171.49.227.64', 1549258799, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393235383738343b),
+('18b6106eb38b7baaeb1f67d482b4384d50be3ee7', '223.230.9.14', 1549262418, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393236323431343b),
+('338fd4b9a3dc21d6f6929e03f257ce7d59951aaa', '223.230.9.14', 1549263129, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393236333132393b),
+('f03e4b0eb388d1547f5d66240d72517484f3367c', '223.230.9.14', 1549263856, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393236333739313b),
+('fce536144ffed4d9fbb8203efec6cad7fba6d277', '223.230.9.14', 1549264617, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393236343535373b),
+('18636b65b5e923a59a6ada6f0becf85d53da619e', '223.230.9.14', 1549265535, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393236353332343b),
+('b72684ee0375d4ec614412122946898da92866d3', '183.83.161.94', 1549266184, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393236363138343b),
+('0258adf59c30eff9fcfb8c0da9425789c91a427f', '183.83.161.94', 1549266564, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393236363536343b),
+('39d6d40f77b81f14e3703376bcb7473517d0ea91', '183.83.161.94', 1549273091, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393237333039313b),
+('7828e68c1201f869e589256c6b1b3f3339c5c94d', '183.83.161.94', 1549274612, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393237343439353b),
+('b79a96ab1f6867d39dc0596066cdb96e7963ddb8', '183.83.161.94', 1549279007, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393237393030333b),
+('82708bf8e183d93d639d1c0038f1694111dfe229', '183.83.161.94', 1549284505, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393238343530353b),
+('4afc31f1b701a1eaf438429d8495e2485fe2034d', '183.83.161.94', 1549284963, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393238343936333b),
+('fbe34c42cc39b1888288475d0644d3595b4460c8', '60.243.164.244', 1549442310, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534393434323231343b),
+('fd4f433476b2d96c3f2a9ede8037e069f501a9c0', '183.83.161.94', 1551417433, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313431373431303b),
+('66a7ef1fa93f643d4f0c24aa544894c566e54dc6', '183.83.161.94', 1551434933, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313433343933333b),
+('e80509f5a90e0b4bcef1ea6cd58fc9eeab2657b2', '183.83.161.94', 1551941049, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535313934313034393b),
+('2554cc6bd48ca7c8100ba3f15c62345c9efb84b2', '115.98.42.205', 1554097221, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535343039373031353b),
+('2ff898d734f2f36fd524573d5bdaa9a378ddef40', '115.98.42.205', 1554098061, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535343039383035383b),
+('4ed8c23bca6e69460cff53d1ac658eebaa96df01', '115.98.42.205', 1554098525, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535343039383530333b),
+('185d1588ccd585f3df5757d7de4a9de358ec9045', '115.98.42.205', 1554099756, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535343039393735363b),
+('85915879838d794757d801fb37a7f964141623a3', '115.98.42.205', 1554101596, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535343130313438303b),
+('d5f7d1429f3b11775ba8f0a57e7523da11b9796e', '115.98.42.205', 1554102081, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535343130323037373b),
+('8e34061fec6abf4ff8d76bb5f1a4f39b9d4afbbd', '115.98.42.205', 1554102618, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535343130323432333b),
+('a5be9c76ae15a22c44c8e95c5224fadae69cf70e', '115.98.42.205', 1554102898, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535343130323837363b),
+('5fc23f07a3830bca71928fc7839475bf7e93a10e', '115.98.42.205', 1554103301, 0x5f5f63695f6c6173745f726567656e65726174657c693a313535343130333132363b);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `cAddress` text,
+  `cEmail` varchar(255) DEFAULT NULL,
+  `cContact` varchar(100) DEFAULT NULL,
+  `cLatlang` text,
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `cAddress`, `cEmail`, `cContact`, `cLatlang`, `status`, `createDate`, `updateDate`) VALUES
+(1, '<p>55 Web Elements Pvt Ltd.</p>\r\n<p><span style=\"color: inherit;\">Flat No 302,The Gateway</span></p>\r\n<p>Sri Swamy Ayyappa Society,Madhapur,Hyderabad, Telangana India-500081</p>', 'information@55web.in', '+914040268570', ' <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243575.55156139124!2d78.25725751890384!3d17.466031203699238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91679231b9fb%3A0x6b668d9663f4bff4!2s55+WEB-+Web+Designing+Company+in+Hyderabad!5e0!3m2!1sen!2sin!4v1542020905262\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 1, '2018-11-12 16:15:21', '2018-11-12 16:41:02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enquiries`
+--
+
+CREATE TABLE `enquiries` (
+  `id` int(11) NOT NULL,
+  `cName` varchar(100) DEFAULT NULL,
+  `cEmail` varchar(150) DEFAULT NULL,
+  `cMobile` varchar(25) DEFAULT NULL,
+  `cMessage` varchar(200) DEFAULT NULL,
+  `createDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `enquiries`
+--
+
+INSERT INTO `enquiries` (`id`, `cName`, `cEmail`, `cMobile`, `cMessage`, `createDate`) VALUES
+(1, '', '', '', '', '2019-01-31 06:03:29');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pages`
+--
+
+CREATE TABLE `pages` (
+  `id` int(11) NOT NULL,
+  `pTitle` varchar(100) DEFAULT NULL,
+  `pAlias` varchar(100) DEFAULT NULL,
+  `pBanner` varchar(255) DEFAULT NULL,
+  `pDesc` text,
+  `seoURL` varchar(255) DEFAULT NULL,
+  `seoCustomURL` varchar(255) DEFAULT NULL,
+  `metaTitle` text,
+  `metaDesc` text,
+  `metaKeys` text,
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pages`
+--
+
+INSERT INTO `pages` (`id`, `pTitle`, `pAlias`, `pBanner`, `pDesc`, `seoURL`, `seoCustomURL`, `metaTitle`, `metaDesc`, `metaKeys`, `status`, `createDate`, `updateDate`) VALUES
+(1, 'Home', 'home', NULL, NULL, NULL, '/', 'Web Designing |Web Development Company in Hyderabad-55web', 'Our Team expertise in Web Designing and Development helped many clients in Hyderabad to enable their websites and meet business objectives.Our Company Provides creative and professional Web Designing and Development services in Hyderabad.We are a Web Designing and Development company based in Hyderabad and Providing best websites and Development services.', 'web designing company in Hyderabad,web development company in Hyderabad,web designers in Hyderabad,website design company in Hyderabad,top web designing companies in Hyderabad,web developers in Hyderabad,web development services in Hyderabad,website development company in Hyderabad,app development companies in Hyderabad,best website designers in Hyderabad,best website designing company in Hyderabad,web designing company in Hyderabad,web development company in Hyderabad,web designing services in Hyderabad,best web design company in Hyderabad,software development company in Hyderabad,web development in Hyderabad,best web development company in Hyderabad,website design services in Hyderabad,android development companies in Hyderabad,eCommerce development company in Hyderabad,web designing companies in madhapur,mobile app development company in Hyderabad,web designers in Hyderabad,website designers in Hyderabad,website developers in Hyderabad,website development in Hyderabad', 1, '2018-11-02 16:30:53', '2019-01-26 08:40:58'),
+(2, 'Portfolio', 'portfolio', NULL, NULL, NULL, 'web-design-portfolio', 'Web Designers | Web Designing Services in Hyderabad -55 WEB', '55 Web Elements is reputed Web Designing services provider in Hyderabad, with our experienced Web Designers we have designed many websites and provided web designing services in Hyderabad. we have provided designing services to small to larger clients. For more details contact : 040-40268570, e-Mail : information@55web.in', 'web designing company in Hyderabad,web development company in Hyderabad,web designers in Hyderabad,website design company in Hyderabad,top web designing companies in Hyderabad,web developers in Hyderabad,web development services in Hyderabad,website development company in Hyderabad,app development companies in Hyderabad,best website designers in Hyderabad,best website designing company in Hyderabad,web designing company in Hyderabad,web development company in Hyderabad,web designing services in Hyderabad,best web design company in Hyderabad,software development company in Hyderabad,web development in Hyderabad,best web development company in Hyderabad,website design services in Hyderabad,android development companies in Hyderabad,ecommerce development company in Hyderabad,web designing companies in madhapur,mobile app development company in Hyderabad,web designers in Hyderabad,website designers in Hyderabad,website developers in Hyderabad,website development in Hyderabad', 1, '2018-11-02 16:32:27', '2019-01-26 08:44:12'),
+(6, 'about', 'about', NULL, NULL, NULL, 'professional-web-design', 'A web design and web development company based in Hyderabad,India', 'A web design and web development company based in Hyderabad,India\r\n', 'A web design and web development company based in Hyderabad,India\r\n', 1, '2018-11-02 16:34:41', '2018-11-02 16:34:41'),
+(7, 'Blog', 'blog', NULL, NULL, NULL, 'blog', 'A web design and web development company based in Hyderabad,India', 'A web design and web development company based in Hyderabad,India', 'A web design and web development company based in Hyderabad,India', 1, '2018-11-02 16:35:01', '2019-01-26 08:16:17'),
+(8, 'Contact', 'contact', NULL, NULL, NULL, 'contact-us', 'A web design and web development company based in Hyderabad,India', 'Contact', 'Contact', 1, '2018-11-02 16:35:24', '2019-01-26 08:16:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sections`
+--
+
+CREATE TABLE `sections` (
+  `id` int(11) NOT NULL,
+  `sTitle` varchar(100) DEFAULT NULL,
+  `sAlias` varchar(100) DEFAULT NULL,
+  `sDesc` text,
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sections`
+--
+
+INSERT INTO `sections` (`id`, `sTitle`, `sAlias`, `sDesc`, `status`, `createDate`, `updateDate`) VALUES
+(1, 'homecontent', '', 'We are passionate, established and a professional web design and web development company that builds and delivers successful websites', 1, '2018-11-02 16:24:24', '2018-11-02 16:24:24'),
+(2, 'Why 55web?', 'Why-55web', '<p>55 Web is a Web Design &amp; Web Development company based in Hyderabad, India. Our dynamic and professional team allows us to be customer focused and to offer web design and web development services that are both efficient and inexpensive. You will be able to make your websites stand out from the rest of the competition in the industry.</p><p>We assure comprehensive services to match the global standard of excellence, and cost effective solutions for your company.</p>', 1, '2018-11-02 16:23:55', '2018-11-02 16:23:55'),
+(3, 'Latest Web Design Projects', 'Latest-Web-Design-Projects', '<p>Few of our latest web design and web development projects completed is shown here.<br></p>', 1, '2018-11-02 16:24:49', '2018-11-02 16:24:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `servicecontents`
+--
+
+CREATE TABLE `servicecontents` (
+  `id` int(11) NOT NULL,
+  `serviceid` int(11) DEFAULT NULL,
+  `serviceitemid` int(11) DEFAULT NULL,
+  `sImage` varchar(255) DEFAULT NULL,
+  `sDesc` text,
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `servicecontents`
+--
+
+INSERT INTO `servicecontents` (`id`, `serviceid`, `serviceitemid`, `sImage`, `sDesc`, `status`, `createDate`, `updateDate`) VALUES
+(2, 1, 2, '1548487225_website-redesign.jpg', '<p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">You may have an existing website, but is it bringing in results you were hoping for? Our experienced team can analyze your current website and provide suggestions and guidance for improvement. Unleash the full potential of your website and get the impressive results you never knew were possible.</p><p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">55 Web\'s expert design team keeps on top of the latest design trends and technology. We are on a constant search to expand what we can do, and push the limits of what is already available. From a standard website with incredible appeal, to more complex foundations such as parallax scrolling or responsive web, we take your concepts and revolutionize your business. It\'s time for a change. Let\'s put a website in place that your visitors are sure to use more than ever before. Count on 55 Web when it is time to accelerate toward the next chapter in our online web presence.</p>', 1, '2019-01-26 07:19:53', '2019-01-26 07:20:25'),
+(3, 1, 1, '1548487317_web-d-1.jpg', '<p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">The web is used every day by billions of users. From informational sites, to online shopping platforms, there is a huge jumble of websites waiting to be discovered. How will yours stand out? We know the ins and outs of websites, what the users are looking for, and how to make your business as successful as possible. Through years of experience, research, and improvements, we know what works. Trust the pros at 55 Web to design a fully custom website, just for your business.</p><p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">We know the ins and outs of websites, what the users are looking for, and how to make your business as successful as possible. Through years of experience, research, and improvements, we know what works. Trust the pros at 55 Web to design a fully custom website, just for your business.</p>', 1, '2019-01-26 07:21:57', '2019-01-26 07:21:57'),
+(4, 1, 4, '1548487354_information-websites.jpg', '<p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">Knowledge is power. Let the world know about your business, events, organizations and more with an intriguing website. In today’s Google age, your website is your first impression. Win over new customers and visitors with an experience that they will not forget.</p><p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">55 Web keeps up with trends and the newest technology in website design. We know what users are looking for in websites and what keeps them glued to a page. We have the knowledge, experience and tools to create an amazing informational website, custom designed for your business.</p>', 1, '2019-01-26 07:22:34', '2019-01-26 07:22:34'),
+(5, 1, 5, '1548487449_e-commerce.jpg', '<p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">Wouldn’t you love to have a salesman that never sleeps and is constantly bringing attention to your products? One that can reach out across the nation, or even internationally to bring in new business? With a custom developed e-commerce website, you could have all of that and more. Have your products and services displayed for a massive audience. In the internet era, now is the perfect opportunity to get started with online shopping. With simple shopping carts and effortless order processing, 55 Web makes it easier than ever to win transactions on the web.</p><p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">Why not make keep it simple? Every e-commerce site comes with training, high quality design, and effortless product management. 55 Web provides all of the tools that you need to run your own online business.</p><p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">Provide your customers with a seamless experience that drives them coming back for more.</p>', 1, '2019-01-26 07:24:09', '2019-01-26 07:24:09'),
+(6, 1, 6, '1548487660_custom_web_dev.jpg', '<p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">At 55 Web, we take your concepts and build charismatic, effective websites that surpass all expectations. From small healthy businesses, to accomplished large companies, 55 Web can handle any size project. Take the first step with a custom website. The world is waiting to see what you have to offer.</p><p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">The key to any successful webpage is to to get your reader excited enough to take action. Our savvy team of programmers use nothing but cutting edge web technology to create a website that can do more than just look good. We will work closely with you to take your website from your idea to its full potential. Your goal is to be successful, and our priority is to get you there as fast as possible. Your dream is important to us. Trust 55 Web to turn your idea into a masterpiece.</p>', 1, '2019-01-26 07:27:40', '2019-01-26 07:27:40'),
+(7, 1, 7, '1548487741_custom-app.jpg', '<p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">Does your website do something impressive, or does it just occupy space on the web? Does it attract users and get them to tell everyone they know? Web applications are critical when it comes to setting your website apart from others. It is the defining line between something to read, and taking action.</p><p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">Don’t sell yourself short. You are sitting on an idea that can knock the socks off your prospects, and we have the tools and resources to make it a reality. Ideas that become reality separate the mediocre from the professionals. 55 Web’ development team is just waiting to try out new ideas. Share your vision, and we will make it happen.</p>', 1, '2019-01-26 07:29:01', '2019-01-26 07:29:01'),
+(8, 2, 8, '1548488243_windows-app.jpg', '<h5 style=\"padding: 0px; margin-right: 0px; margin-left: 0px; font-family: &quot;Open Sans&quot;, sans-serif; font-weight: 600; line-height: 20px; color: rgb(112, 112, 112); text-rendering: optimizelegibility; font-size: 18px;\">Windows Mobile App Development</h5><p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">Great Windows Mobile App development requires an experienced and well-rounded team. 55 Web has a blend of interface designers, software developers and quality testers to ensure that your final product is the best it can possibly be as we prepare your app for the marketplace.</p><h5 style=\"padding: 0px; margin-right: 0px; margin-left: 0px; font-family: &quot;Open Sans&quot;, sans-serif; font-weight: 600; line-height: 20px; color: rgb(112, 112, 112); text-rendering: optimizelegibility; font-size: 18px;\">Windows Mobile App Development Process</h5><p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">When it is time to develop your Windows phone app, 55 Web engineers put your ideas into action, mapping out the various wireframes, functionality and intended usage scenarios. It is important that you see the entire process, and how users might navigate through your Windows Mobile application prior to the actual programming phase. This allows for revisions and adjustments to the workflow, without costly changes to the code. The end result: a well thought out Windows Mobile application.</p><h5 style=\"padding: 0px; margin-right: 0px; margin-left: 0px; font-family: &quot;Open Sans&quot;, sans-serif; font-weight: 600; line-height: 20px; color: rgb(112, 112, 112); text-rendering: optimizelegibility; font-size: 18px;\">Submitting a Windows Mobile App to the Windows Marketplace</h5><p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">When your Windows Mobile app is completed and thoroughly tested, your 55 Web project manager will help you through the next steps of submitting your new app to the Windows Mobile Marketplace.</p><p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">Tell us your app idea.&nbsp;<a href=\"http://55web.in/contact.html\" style=\"padding: 0px; margin: 0px; color: rgb(223, 0, 0); outline: none;\">Contact us</a>&nbsp;today.</p>', 1, '2019-01-26 07:37:23', '2019-01-26 07:37:23'),
+(9, 2, 9, '1548488368_mobile-websites.jpg', '<p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">It is no surprise that consumers have completely shifted toward the mobile movement. Everybody is on the go, trying to get as much done as possible. Whenever someone takes out their phone, it is an opportunity for your company to shine. If your website loads slowly, or does not appear in an optimized mobile screen format, then that can translate to missed sales.</p><p style=\"padding: 0px; margin-bottom: 25px; color: rgb(112, 112, 112); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px;\">With several screen sizes and functions available, you can avoid some of the drawbacks of developing a native app by going with a mobile version of your website. 55 Web’ team has the experience, knowledge and tools to make an innovative, and effective mobile website. With a mobile website, you can give your prospects on the go the best opportunity to view your offering.</p>', 1, '2019-01-26 07:39:28', '2019-01-26 07:39:28');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `serviceitems`
+--
+
+CREATE TABLE `serviceitems` (
+  `id` int(11) NOT NULL,
+  `serviceid` int(11) DEFAULT NULL,
+  `sTitle` varchar(200) DEFAULT NULL,
+  `sImage` varchar(255) DEFAULT NULL,
+  `sDesc` varchar(250) DEFAULT NULL,
+  `sBanner` varchar(255) DEFAULT NULL,
+  `seoURL` varchar(255) DEFAULT NULL,
+  `seoCustomURL` varchar(255) DEFAULT NULL,
+  `metaTitle` text,
+  `metaDesc` text,
+  `metaKeys` text,
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `serviceitems`
+--
+
+INSERT INTO `serviceitems` (`id`, `serviceid`, `sTitle`, `sImage`, `sDesc`, `sBanner`, `seoURL`, `seoCustomURL`, `metaTitle`, `metaDesc`, `metaKeys`, `status`, `createDate`, `updateDate`) VALUES
+(1, 1, 'Website Design', '1541490667_web_design.png', 'Custom web design tailored specifically for your business. It’s time to get creative.', '1541502174_website-design.png', 'home/serviceItem/1', 'website-design', 'Web Designing Services in Hyderabad-55 Web Elements', '55 Web Elements is a Leading Web design and development Company in Hyderabad.We Provide Web  designing, Development, Responsive Web Design,E Commerce web, Custom Web Development services.', 'web design services in hyderabad, web development services in hyderabad.', 1, '2018-11-06 13:21:07', '2018-11-06 16:32:54'),
+(2, 1, 'Website Redesign', '1541491147_website_redesign.png', 'Have a website? It’s never too soon for a remodel. Modernize your website with the newest trends in web ', '1541502195_redesign.png', 'home/serviceItem/2', 'website-redesign', 'Website Redesign Services Company  in Hyderabad-55 Web Elements', '55 Web Elements is a Leading Web designing and development Company in Hyderabad.We Provide Website redesign , Responsive web design services.', 'website redesign services in hyderabad.', 1, '2018-11-06 13:29:07', '2018-11-06 16:33:15'),
+(3, 3, 'Solutions', '1541502759_web_design.png', 'Solutions', '1541502759_website-design.png', 'home/serviceItem/3', 'php', 'Solutions', 'Solutions', 'Solutions', 0, '2018-11-06 16:42:39', '2018-11-06 16:43:02'),
+(4, 1, 'Informational Websites', '1548486354_informational_websites.png', 'Learning doesn’t have to be boring. With an aesthetically appealing website, readers will be begging ', '1548486354_informational-websites.jpg', 'home/serviceItem/4', 'best-web-design', 'Mobile Responsive Web Design Services in Hyderabad -55Web Elements', '55 Web Elements is a Leading Web designing and development Company in Hyderabad.We Provide Mobile Web Responsive Design, Mobile Website Development Services .', 'Mobile Responsive Web Design Services in Hyderabad.', 1, '2019-01-26 07:05:54', '2019-01-26 07:05:54'),
+(5, 1, 'E-Commerce Websites', '1548487432_e-commerce.png', 'A salesman that never sleeps and works nights and weekends? How can you say no to that?', '1548487432_e-commerce-web-design.png', 'home/serviceItem/5', 'ecommerce-website-design', 'E-Commerce Website Development Company in Hyderabad-55 Web Elements', '55 Web Elements is a Leading Web designing and development Company in Hyderabad.We Provide E Commerce Web Design, Development, Shopping Cart, Payment gateway Integration Services.', 'E Commerce Web Development Company in Hyderabad.', 1, '2019-01-26 07:23:52', '2019-01-26 07:23:52'),
+(6, 1, 'Custom Web Development', '1548487641_custom_web_development.png', 'Custom means one of a kind. Make your business shine above the jumble of websites and links.', '1548487641_custom-webdesign.jpg', 'home/serviceItem/6', 'custom-web-development', 'Custom Web Development Services Company in Hyderabad-55 Web Elements', '55 Web Elements is a Leading Web designing and development Company in Hyderabad.We Provide Custom Web Development, Web Software development  Services.', 'Custom Web Development services in hyderabad.', 1, '2019-01-26 07:27:21', '2019-01-26 07:27:21'),
+(7, 1, 'Custom Application Development', '1548487727_custom_application_dev.png', 'Your idea, our developers. Have a feature that you are dying to have? We can make it happen.', '1548487727_custom-application-dev.png', 'home/serviceItem/7', 'custom-application-development', 'Web Application Development Company in Hyderabad - 55 Web Elements', '55 Web Elements is a Leading Web designing and development Company in Hyderabad.We Provide Custom Web Application Development Services for your Business Needs.', 'Custom Web Development services in hyderabad.', 1, '2019-01-26 07:28:47', '2019-01-26 07:28:47'),
+(8, 2, 'Windows App Development', '1548488211_web_app_development.png', 'Take mobile websites to the next level by creating web apps that can run from mobile devices.', '1548488211_window-app.png', 'home/serviceItem/8', 'windows-app-development', 'Mobile App Development , Windows Mobile Development,Mobile Application Development Company,Windows Mobile Application', '55WEB offers windows mobile application solution for wide range of portable and mobile devices.', 'Mobile applications, windows phone app development,Mobile Application Development, Mobile App development, mobile app developers, mobile app development, mobile application design,Windows Mobile Application', 1, '2019-01-26 07:36:51', '2019-01-26 07:36:51'),
+(9, 2, 'Mobile Websites', '1548488350_Mobile-Websites.png', 'Mobile browsing is about to surpass regular browsers. Why not go mobile? Meet your prospects where they ', '1548488350_mobile_websites.png', 'home/serviceItem/9', 'mobile-websites', 'Mobile website, Mobile Website Development , Mobile Website Design ,Mobile Apps Development', '55WEB Mobile website development service offerings mobile web design and development solutions for iPhone, Android, BlackBerry and other smart phones.', 'Mobile web development,Mobile Website Development, mobile web design', 1, '2019-01-26 07:39:10', '2019-01-26 07:39:10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
+--
+
+CREATE TABLE `services` (
+  `id` int(11) NOT NULL,
+  `sTitle` varchar(50) DEFAULT NULL,
+  `seoURL` varchar(255) DEFAULT NULL,
+  `seoCustomURL` varchar(255) DEFAULT NULL,
+  `metaTitle` text,
+  `metaDesc` text,
+  `metaKeys` text,
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `sTitle`, `seoURL`, `seoCustomURL`, `metaTitle`, `metaDesc`, `metaKeys`, `status`, `createDate`, `updateDate`) VALUES
+(1, 'Web', 'home/services/1', 'web-design-development', 'Website Designers | Developers in Hyderabad-55 Web', '55WEB We are the Leading Website Designers and Developers in Hyderabad. We Design and Develop E Commerce, Real Estate, Ticket Booking Portal Development Services.', 'website designers in Hyderabad, website developers in Hyderabad.', 1, '2018-11-06 12:42:20', '2018-11-06 16:10:30'),
+(2, 'Mobile', 'home/services/2', 'mobile-applications', 'Mobile Application Development Company,Mobile Application Development,Windows Mobile Application', '55WEB offers windows mobile application solution for wide range of portable and mobile devices.', 'Mobile Application Development, Mobile App development, mobile app developers, mobile app development, mobile application design,Windows Mobile Application', 1, '2018-11-06 12:44:11', '2018-11-06 12:44:11'),
+(3, 'Technologies', 'home/services/3', 'solution-web-application', 'Technologies', 'Technologies', 'Technologies', 0, '2018-11-06 12:45:07', '2019-01-26 08:29:35');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testimonials`
+--
+
+CREATE TABLE `testimonials` (
+  `id` int(11) NOT NULL,
+  `tTitle` varchar(300) DEFAULT NULL,
+  `altTitle` text,
+  `tImage` varchar(255) DEFAULT NULL,
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `testimonials`
+--
+
+INSERT INTO `testimonials` (`id`, `tTitle`, `altTitle`, `tImage`, `status`, `createDate`, `updateDate`) VALUES
+(1, 'We found 55Web to be very professional, efficient & designed an effective web site for us.', 'Ananya', '15411612381465448948.gif', 1, '2018-11-02 17:49:02', '2019-01-26 08:14:21'),
+(2, 'Team 55Web has done an excellent job for me. They delivered my website that was way beyond my expectations', 'Pepboyz', '15411611581466142499.gif', 1, '2018-11-02 17:49:18', '2019-01-26 08:14:13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `firstname` varchar(50) DEFAULT NULL,
+  `lastname` varchar(50) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `mobile` int(15) DEFAULT NULL,
+  `city_id` int(11) DEFAULT NULL,
+  `usertype` int(1) NOT NULL COMMENT '1-superadmin,2-admin,3-Service Provider',
+  `email_activation` int(11) NOT NULL DEFAULT '0',
+  `status` int(1) NOT NULL DEFAULT '0',
+  `created_date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`, `mobile`, `city_id`, `usertype`, `email_activation`, `status`, `created_date`) VALUES
+(1, '55', 'Web', 'info@55web.in', 'd033e22ae348aeb5660fc2140aec35850c4da997', 0, NULL, 1, 0, 1, '2015-12-18 02:07:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wework`
+--
+
+CREATE TABLE `wework` (
+  `id` int(11) NOT NULL,
+  `wTitle` varchar(100) DEFAULT NULL,
+  `altTitle` text,
+  `wDesc` varchar(200) DEFAULT NULL,
+  `wImage` varchar(255) DEFAULT NULL,
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `wework`
+--
+
+INSERT INTO `wework` (`id`, `wTitle`, `altTitle`, `wDesc`, `wImage`, `status`, `createDate`, `updateDate`) VALUES
+(1, 'Make it happen', 'Make it happen', '<p>We take the time to fully understand your business and objectives.&nbsp;&nbsp;&nbsp;&nbsp;<br></p>', '1548491057blog-4.jpg', 1, '2018-11-02 17:29:58', '2019-01-26 08:24:17'),
+(2, 'Turn ideas into reality', 'Web desiging', '<p>We will build the website to the latest web standards, and semantically code the site to be search engine friendly<br></p>', '15411600091466169866.jpg', 1, '2018-11-02 17:30:09', '2019-01-26 08:25:17'),
+(3, 'Advise', '', '<p>Add value with our knowledge and experience<br></p>', '1548491168blog-2.jpg', 1, '2019-01-26 08:26:08', '2019-01-26 08:26:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `works`
+--
+
+CREATE TABLE `works` (
+  `id` int(11) NOT NULL,
+  `tCategory` varchar(100) DEFAULT NULL,
+  `tTitle` varchar(255) DEFAULT NULL,
+  `tType` varchar(50) DEFAULT NULL,
+  `tDesc` text,
+  `tURL` varchar(255) DEFAULT NULL,
+  `tSImage` varchar(255) DEFAULT NULL,
+  `tImage` varchar(255) DEFAULT NULL,
+  `orderpos` int(11) DEFAULT '0',
+  `status` int(1) DEFAULT '1',
+  `createDate` datetime DEFAULT NULL,
+  `updateDate` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `works`
+--
+
+INSERT INTO `works` (`id`, `tCategory`, `tTitle`, `tType`, `tDesc`, `tURL`, `tSImage`, `tImage`, `orderpos`, `status`, `createDate`, `updateDate`) VALUES
+(1, 'Application', 'Parameshwara Industries', 'UI-UX', '<p>DESIGN, WEBSITE DESIGN &amp; BUILD, XHTML.<br></p>', 'http://55web.in/samples/parameshwara/', '1541163187parameshwara.jpg', '1541163187parameshwara-large.jpg', 1, 1, '2018-11-02 18:23:07', '2019-04-01 08:48:56'),
+(2, 'Corporate', 'Sqy!', 'UI-UX', '<p>WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML<br></p>', 'http://sqyrewards.com/', '1541501333sqy.jpg', '1541501333sqy-large.jpg', 2, 1, '2018-11-06 16:18:53', '2019-04-01 08:48:56'),
+(3, 'Application', 'Apollo Life Studio', 'UI-UX', '<p>UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, XHTML.<br></p>', 'http://apollolifestudio.com/', '1548486072apollolife.jpg', '1548486072apollolife-large.jpg', 3, 1, '2019-01-26 07:01:12', '2019-04-01 08:48:56'),
+(4, 'Application', 'Quality Group', 'UI-UX', '<p>UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML<br></p>', 'http://hostgenie.in/phpdev/qualitygroup/', '15484883361qualitygroup.jpg', '15484882031qualitygroup-(1).jpg', 4, 1, '2019-01-26 07:36:43', '2019-04-01 08:48:56'),
+(5, 'Application', 'VCelluloids', 'UI-UX', '<p>UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML<br></p>', 'https://vcelluloids.com/betav2/', '15484887882vcelluloids.jpg', '15484886962vcelluloids.jpg', 5, 1, '2019-01-26 07:44:56', '2019-04-01 08:48:56'),
+(6, 'Application', 'Enpidia', 'UI-UX', '<p>UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML<br></p>', 'https://enpidia.com/', '15484889243enpedia.jpg', '15484889243enpedia-(1).jpg', 6, 1, '2019-01-26 07:48:44', '2019-04-01 08:48:56'),
+(7, 'Application', 'Walls Asia', 'UI-UX', '<p>UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML<br></p>', 'https://wallsasia.com/', '15484893204wallsasia.jpg', '15484893204wallsasia---Copy.jpg', 7, 1, '2019-01-26 07:55:20', '2019-04-01 08:48:56'),
+(8, 'Application', 'Vertex Homes', 'UI-UX', '<p>UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML<br></p>', 'https://vertexhomes.com', '15484898255vertexhomes.jpg', '15484898255vertexhomes-(1).jpg', 8, 1, '2019-01-26 08:03:45', '2019-04-01 08:48:56'),
+(9, 'Application', 'Wonder Child Group', 'UI-UX', '<p>UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML<br></p>', 'http://www.wonderchildgroup.com/', '15484905857wonderchild.jpg', '15484905857wonderchild---Copy.jpg', 9, 1, '2019-01-26 08:16:25', '2019-04-01 08:48:56'),
+(10, 'Architecture', 'Shivas Architecture', 'UI-UX', '<p>TYPE OF WORK: UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML<br></p>', 'http://www.shivasarchitects.com/', '15541021608shivasarchitecture.jpg', '15541021608shivasarchitecture.jpg', 10, 1, '2019-04-01 09:02:40', '2019-04-01 09:02:40'),
+(11, 'E-Commerce', 'AJM Decor', 'Application', '<p>TYPE OF WORK: UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML<br></p>', 'http://www.ajmdecor.com/', '15541023299ajmdecor.jpg', '15541023299ajmdecor.jpg', 11, 1, '2019-04-01 09:05:29', '2019-04-01 09:05:29'),
+(12, 'E-Commerce', 'The-Elevator-store', 'Application', '<p>TYPE OF WORK: UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML<br></p>', 'https://the-elevator-store.com/beta/', '15541023588the-elevator-store.jpg', '15541023588the-elevator-store.jpg', 12, 1, '2019-04-01 09:05:58', '2019-04-01 09:05:58'),
+(13, 'E-Commerce', 'Crazy Costumes', 'Application', '<p>TYPE OF WORK: UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML<br></p>', 'http://www.crazycostumes.in/beta/', '155410238610crazycostumes.jpg', '155410238610crazycostumes.jpg', 13, 1, '2019-04-01 09:06:26', '2019-04-01 09:06:26'),
+(14, 'Custom-Application', 'Eduknack', 'Application', '<p>TYPE OF WORK: UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML<br></p>', 'http://eduknack.com/', '155410274610eduknack.jpg', '155410274610eduknack.jpg', 14, 1, '2019-04-01 07:12:26', '2019-04-01 07:12:26'),
+(15, 'CMS', 'Hydam', 'UI-UX', 'TYPE OF WORK: UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML', 'http://www.hydam.ae/', '155410277311hydam.jpg', '155410277311hydam.jpg', 15, 1, '2019-04-01 07:12:53', '2019-04-01 07:12:53'),
+(16, 'CMS', 'Informsy', 'UI-UX', 'TYPE OF WORK: UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML', 'https://informsy.in/', '155410284312informsy.jpg', '155410284312informsy.jpg', 16, 1, '2019-04-01 07:14:03', '2019-04-01 07:14:03'),
+(17, 'CMS', 'MiSuraksha', 'Application', 'TYPE OF WORK: UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML', 'https://www.misuraksha.com/', '155410287313misuraksha.jpg', '155410287313misuraksha.jpg', 17, 1, '2019-04-01 07:14:33', '2019-04-01 07:14:55'),
+(18, 'E-Commerce', 'Murugan Ghee', 'Application', 'TYPE OF WORK: UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML', 'http://www.srimuruganghee.com/', '155410306914muruganghee.jpg', '155410306914muruganghee.jpg', 18, 1, '2019-04-01 07:17:49', '2019-04-01 07:17:49'),
+(19, 'E-Commerce', 'Gamecrazy', 'Application', 'TYPE OF WORK: UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML', 'http://www.gamecrazy.in/', '155410309416gamecrazy.jpg', '155410309416gamecrazy.jpg', 19, 1, '2019-04-01 07:18:14', '2019-04-01 07:18:14'),
+(20, 'Health-Care', 'Pinks N Bloos', 'UI-UX', 'TYPE OF WORK: UX (USER EXPERIENCE) DESIGN, WEBSITE DESIGN &amp; BUILD, RESPONSIVE DESIGN, XHTML', 'http://www.pinksnbloos.com/', '155410312016pinksnbloos.jpg', '155410312016pinksnbloos.jpg', 20, 1, '2019-04-01 07:18:40', '2019-04-01 07:18:40');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `about`
+--
+ALTER TABLE `about`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `banners`
+--
+ALTER TABLE `banners`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `blogs`
+--
+ALTER TABLE `blogs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `careers`
+--
+ALTER TABLE `careers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `enquiries`
+--
+ALTER TABLE `enquiries`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pages`
+--
+ALTER TABLE `pages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sections`
+--
+ALTER TABLE `sections`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `servicecontents`
+--
+ALTER TABLE `servicecontents`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `serviceitems`
+--
+ALTER TABLE `serviceitems`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `services`
+--
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wework`
+--
+ALTER TABLE `wework`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `works`
+--
+ALTER TABLE `works`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `about`
+--
+ALTER TABLE `about`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `banners`
+--
+ALTER TABLE `banners`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `blogs`
+--
+ALTER TABLE `blogs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `careers`
+--
+ALTER TABLE `careers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `enquiries`
+--
+ALTER TABLE `enquiries`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `pages`
+--
+ALTER TABLE `pages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `sections`
+--
+ALTER TABLE `sections`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `servicecontents`
+--
+ALTER TABLE `servicecontents`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `serviceitems`
+--
+ALTER TABLE `serviceitems`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `services`
+--
+ALTER TABLE `services`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `wework`
+--
+ALTER TABLE `wework`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `works`
+--
+ALTER TABLE `works`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
