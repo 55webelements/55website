@@ -1,0 +1,112 @@
+@media screen and (min-width: 320px) and (max-width: 767px){
+.endtoend h2{
+	font-size:17px;
+	top:13%;
+}	
+.endend{
+	font-size:16px;
+}
+.firm{
+	font-size:16px;
+}
+.endtoend{
+	top:5%;
+}
+.endtoend h5 a{
+	font-size:10px;
+	padding:2px 18px;
+}
+.endtoend h5{
+	margin-top:3%;
+}
+.endtoend h4{
+	font-size:10px;
+}
+.discover h3{
+	font-size:21px;
+}
+.discover h5{
+	font-size:13px;
+}
+.discover p{
+	padding:0;
+}
+.cust-navbar-brand img{
+	width:55%;
+}
+.about{
+	top:9%;
+}
+.about h1{
+	font-size:18px;
+}
+.about h3{
+	font-size:12px;
+}
+.aboutdigital h1{
+	font-size:26px;
+}
+.whatwe{
+	top:20%;
+}
+.whatwe h3{
+	font-size:10px;
+}
+.allskills h3{
+	font-size:15px;
+	line-height:20px;
+}
+.allskills h5{
+	font-size:13px;
+	line-height:20px;
+}
+.allskills h6{
+	margin:0;
+}
+.mobileleft{
+	margin:1% 4%;
+}
+}
+@media screen and (min-width: 320px) and (max-width: 640px){
+	.endtoend h4{
+		top:21%;
+	}
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1279px){
+	
+		
+	.endtoend h2{
+	font-size:32px;
+	top:13%;
+}	
+.endend{
+	font-size:26px;
+}
+.firm{
+	font-size:26px;
+}
+.endtoend h4{
+	font-size:16px;
+	top:22%;
+}
+ul.social-icons li a{
+	padding:0;
+}
+.about{
+	top:12%;
+}
+.about h1{
+	font-size:35px;
+}
+.about h3{
+	font-size:20px;
+}
+.whatwe{
+	top:26%;
+}
+.endtoend{
+	top:12%;
+}
+}

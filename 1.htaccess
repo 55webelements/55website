@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+ 
+    RewriteEngine On
+    RewriteBase /pawntizen/
+ 
+ 
+</IfModule>
+ 
+<IfModule !mod_rewrite.c>
+ 
+    # Without mod_rewrite, route 404's to the front controller
+    ErrorDocument 404 /index.php
+ 
+</IfModule>
